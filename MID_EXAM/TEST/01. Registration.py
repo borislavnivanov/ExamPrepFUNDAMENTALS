@@ -8,7 +8,7 @@ def letters(lst: list, com: str) -> list:
 
 
 def reverse(lst: list, start_ind: int, end_ind: int) -> None:
-    if start_ind >= 0 and end_ind < len(lst):
+    if 0 <= start_ind < len(lst) and 0 <= end_ind < len(lst) and start_ind < end_ind:
         print(''.join(lst[end_ind:start_ind - 1:-1]))
 
 
@@ -17,7 +17,7 @@ def substring(lst: list, sub_string: str) -> list:
     if sub_string not in text:
         print(f'The username {text} doesn\'t contain {sub_string}.')
     else:
-        new_text = text.replace(sub_string, '')
+        new_text = text.replace(sub_string, '', 1)
         print(new_text)
         return [x for x in new_text]
 
