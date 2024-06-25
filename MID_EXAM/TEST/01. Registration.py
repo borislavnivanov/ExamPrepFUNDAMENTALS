@@ -8,7 +8,7 @@ def letters(lst: list, com: str) -> list:
 
 
 def reverse(lst: list, start_ind: int, end_ind: int) -> None:
-    if 0 <= start_ind < len(lst) and 0 <= end_ind < len(lst) and start_ind < end_ind:
+    if 0 < start_ind < len(lst) and 0 < end_ind < len(lst):
         print(''.join(lst[end_ind:start_ind - 1:-1]))
 
 
